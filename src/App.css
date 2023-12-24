@@ -1,0 +1,6 @@
+._section {
+  @apply py-10;
+}
+.section-title {
+  @apply text-primary text-3xl text-center font-semibold mb-6;
+}
