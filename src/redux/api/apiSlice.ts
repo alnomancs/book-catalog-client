@@ -5,13 +5,6 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5001/",
   }),
-  tagTypes: ["Books"],
-  endpoints: (build) => ({
-    getAllBooks: build.query({
-      query: () => "books",
-      providesTags: ["Books"],
-    }),
-  }),
+  tagTypes: ["Books", "Reviews"],
+  endpoints: () => ({}),
 });
-
-export const { useGetAllBooksQuery } = api;
