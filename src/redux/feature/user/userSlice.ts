@@ -12,7 +12,8 @@ interface InitialUserState {
 
 const initialState: InitialUserState = {
   user: {
-    email: null,
+    email: "alnoman.cs@gmail.com",
+    // email: null,
   },
   isLoading: false,
   isSuccess: false,
@@ -20,12 +21,13 @@ const initialState: InitialUserState = {
   error: null,
 };
 
-export const userSlice = createSlice({
+const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (state, action) => {
-      state.user.email = action.payload;
+    setUser: (state) => {
+      // setUser: (state, action) => {
+      state.user.email = "alnoman.cs@gmail.com";
       state.isSuccess = false;
       state.isError = false;
     },
@@ -34,3 +36,6 @@ export const userSlice = createSlice({
     },
   },
 });
+
+export const { setUser, setLoading } = userSlice.actions;
+export default userSlice.reducer;

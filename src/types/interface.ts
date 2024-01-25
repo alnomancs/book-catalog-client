@@ -6,3 +6,13 @@ export interface IBook {
   publicationDate: string;
   addedBy: string | null;
 }
+
+export interface IReviewProps {
+  bookId: string | undefined;
+  reviewDetails: IReview;
+}
+
+export interface IReview {
+  userEmail: string;
+  review: string;
+}

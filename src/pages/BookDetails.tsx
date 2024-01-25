@@ -4,7 +4,6 @@ import Reviews from "../components/ui/Reviews";
 
 export default function BookDetails() {
   const { id } = useParams();
-  console.log(id);
   return (
     <div className="page_main">
       <div className="flex flex-col lg:flex-row gap-6 mb-8">
